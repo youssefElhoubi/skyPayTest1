@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -15,7 +16,7 @@ public class Account implements AccountService {
     private int balance;
     private int amount;
     private LocalDate date;
-    List<Transaction> transactions;
+    List<Transaction> transactions = new ArrayList<>();
 
     @Override
     public void deposit(int amount) {
